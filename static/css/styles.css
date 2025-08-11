@@ -1,0 +1,26 @@
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial; background:#0e0f12; color:#eaeaea; }
+.container { max-width: 860px; margin: 0 auto; padding: 24px 16px; }
+header { display:flex; align-items:center; justify-content:space-between; margin-bottom: 12px; }
+h1 { font-size: 20px; margin: 0; }
+.meta { display:flex; align-items:center; gap:12px; }
+.badge { font-size:12px; padding:4px 8px; border-radius:999px; background:#1f232b; color:#9ac1ff; }
+.link { background:none; color:#9ac1ff; border:none; cursor:pointer; text-decoration: underline; }
+
+.chat { background:#12141a; border:1px solid #23262f; border-radius:16px; padding:16px; min-height: 50vh; display:flex; flex-direction: column; gap:10px; }
+.msg { display:flex; }
+.msg.user { justify-content:flex-end; }
+.msg.assistant { justify-content:flex-start; }
+.bubble { max-width: 80%; padding:10px 12px; border-radius:12px; line-height:1.4; }
+.user .bubble { background:#2a6df4; color:white; border-bottom-right-radius:4px; }
+.assistant .bubble { background:#1a1d24; color:#eaeaea; border-bottom-left-radius:4px; }
+
+.typing { font-size: 13px; color:#b6b6b6; }
+.hidden { display:none; }
+
+.composer { margin-top: 12px; display:flex; gap:8px; }
+textarea { flex:1; background:#0f1116; color:#eaeaea; border:1px solid #23262f; border-radius:10px; padding:10px; resize:vertical; }
+button[type=submit] { background:#2a6df4; color:white; border:none; border-radius:10px; padding:10px 16px; cursor:pointer; }
+button[type=submit]:disabled { opacity:0.6; cursor:not-allowed; }
+
+.usage { margin-top: 8px; font-size:12px; color:#a2a2a2; }
