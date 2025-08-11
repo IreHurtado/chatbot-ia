@@ -17,7 +17,7 @@ Pensado para ser fácilmente desplegable en **Render** y personalizable para dis
 ---
 
 ## 📂 Estructura de carpetas
-``
+```
 chatbot-pro-ia/
 │
 ├── core/ # Proyecto principal de Django
@@ -27,7 +27,7 @@ chatbot-pro-ia/
 ├── .env # Variables de entorno (no subir)
 ├── requirements.txt # Dependencias
 └── Procfile # Configuración para Render
-``
+```
 
 ---
 
