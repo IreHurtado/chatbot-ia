@@ -34,33 +34,33 @@ chatbot-pro-ia/
 ## ⚙️ Instalación y uso en local
 
 1. **Clonar el repositorio**
-
+```
 git clone https://github.com/tu-usuario/chatbot-pro-ia.git
 cd chatbot-pro-ia
-
+```
 Crear y activar entorno virtual
-
+```
 python3 -m venv .venv
 source .venv/bin/activate  # En Windows: .venv\Scripts\activate
-
+```
 Instalar dependencias
-
+```
 pip install -r requirements.txt
 Configurar variables de entorno
-
+```
 Crea el archivo .env y completa los valores:
-
+```
 DEBUG=True
 SECRET_KEY=django-insecure-tu_clave
 OPENAI_API_KEY=sk-tu_api_key
 OPENAI_MODEL=gpt-4o-mini
 ALLOWED_HOSTS=127.0.0.1,localhost
-
+```
 Migrar y ejecutar servidor
-
+```
 python manage.py migrate
 python manage.py runserver
-
+```
 Abrir en http://127.0.0.1:8000
 
 🚀 Deploy en Render
@@ -69,20 +69,20 @@ Subir el proyecto a GitHub.
 Crear un nuevo servicio web en Render y conectar el repo.
 
 Configuración en Render:
-
+```
 Build command: pip install -r requirements.txt
 
 Start command: gunicorn core.wsgi:application --preload
-
+```
 Variables de entorno en Render:
-
+```
 DEBUG=False
 SECRET_KEY=django-insecure-tu_clave
 OPENAI_API_KEY=sk-tu_api_key
 OPENAI_MODEL=gpt-4o-mini
 ALLOWED_HOSTS=.onrender.com,.tudominio.com
 CSRF_TRUSTED_ORIGINS=https://*.onrender.com,https://*.tudominio.com
-
+```
 Opcional: configurar subdominio (ej. chat.tudominio.com).
 
 🛠 Tecnologías utilizadas
